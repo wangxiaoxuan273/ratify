@@ -16,6 +16,18 @@ on:
         required: true
         default: "3.18.0"
         type: string
+  workflow_dispatch:
+    inputs:
+      k8s_version:
+        description: "Kubernetes version"
+        required: true
+        default: "1.31.2"
+        type: string
+      gatekeeper_version:
+        description: "Gatekeeper version"
+        required: true
+        default: "3.18.0"
+        type: string
 
 jobs:
   build_test_aks_e2e:
